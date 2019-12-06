@@ -6,6 +6,9 @@ bot.setConfig(config);
 
 bot.addResponse((message) => {return true;}, (message, respond) => {
     console.log("oop")
-    respond("fuck")
+    respond("i like bears\ni like bears")
 });
+
+bot.addResponse(/^(fuck you gene)/i, (m, r) => r("ay fuck you too"))
+
 bot.init();
