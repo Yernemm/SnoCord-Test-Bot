@@ -4,13 +4,16 @@ const config = require("./config.json");
 let bot = new SnoCord.Bot();
 bot.setConfig(config);
 
-bot.addResponse((message) => {return true;}, (message, respond) => {
+bot.addResponse(() => {return true;}, (r) => {
     console.log("oop")
-    respond("i like bears\ni like bears")
+    r.respond("i like bears\ni like bears")
 }, -1);
 
-bot.addResponse(/^(fuck (you )?gene)/i, (m, r) => r("ay fuck you too"))
+
 
 bot.addResponse(/retard/ig,(m,r)=>r("what the fuck did you just fucking say") )
+bot.addResponse(/^(fuck you gene)/i, (r) => r.respond("ay fuck you too"))
+
+bot.addCommand("help",(r)=>{r.respond(`I won't help you, ${r.message.author}`)})
 
 bot.init();
