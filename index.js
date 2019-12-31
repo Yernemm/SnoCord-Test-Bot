@@ -16,4 +16,8 @@ bot.addResponse(/^(fuck you gene)/i, (r) => r.respond("ay fuck you too"))
 
 bot.addCommand("help",(r)=>{r.respond(`I won't help you, ${r.message.author}`)})
 
+bot.addCommandHandler('./commands/');
+
+
+
 bot.init();
