@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Yernemm/SnoCord-Test-Bot/issues"
   },
-  "homepage": "https://github.com/Yernemm/SnoCord-Test-Bot#readme"
+  "homepage": "https://github.com/Yernemm/SnoCord-Test-Bot#readme",
+  "dependencies": {
+    "snodb": "^1.0.0"
+  }
 }
